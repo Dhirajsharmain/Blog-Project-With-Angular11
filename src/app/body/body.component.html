@@ -1,0 +1,101 @@
+ <!-- Carousel Starts here -->
+ <hr/>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/user/erondu/1200x300/?corporate" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/user/erondu/1200x300/?tech" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/user/erondu/1200x300/?technology" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div><hr/>
+ <!-- Carousel end here -->
+  <!-- Header Starts here -->
+  <!-- <hr/>
+  <div class="position-relative overflow-hidden p-1 p-md-3 m-md-1 text-center bg-light">
+    <div class="col-md-5 p-lg-3 mx-auto my-3">
+      <h1 class="display-4 fw-normal">Business Blog</h1>
+      <p class="lead fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, exercitationem!</p>
+      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div><hr/> -->
+  <!-- Header Ends here -->
+
+<div class="container">
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Blog</li>
+    </ol>
+  </nav>
+
+  <div class="row g-4">
+    <div class="col-md-8 ">
+      <div class="card mb-3">
+        <img src="https://source.unsplash.com/user/erondu/900x300" class="card-img-top" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">Title here</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="d-flex justify-content-between">
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="btn btn-primary ">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Items Strats here -->
+
+        <div class="row border mb-4 " *ngFor="let item of postDetail">
+          <div class="col-md-4">
+            <img src="{{item.imgUrl}}" class="card-img-top" alt="...">
+          </div>
+          <div class="col-md-8">
+            <h5 class="py-2"><a routerLink="{{item.id}}">{{item.title}}</a> </h5>
+            <p class="card-text">{{item.content | slice:0:100}}</p>
+            <div class="d-flex justify-content-between">
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <a routerLink="{{item.id}}" class="btn btn-primary ">Read More</a>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        <div class="col-md-4">
+          <app-sidebar></app-sidebar>
+        </div>
+        </div>
+        </div>
+      <!-- Pagination Starts Here -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
